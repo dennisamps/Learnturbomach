@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/calculator.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <!-- scripts -->
+    <!-- <script .js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"> </script>
+
+  </head>
+  <body>
+    <!-- nagivation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+      <a class="navbar-brand" href="index.html"><b>TURBO</b>Machinery</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Gas_turbine.html">Gas Turbine</a>
+        </li>
+
+        <!-- <li> -->
+          <!-- <a class="nav-link "href="Steam_turbine.html"> Steam Turbine</a> -->
+        <!-- </li> -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Velocity Triangles
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="compressor.html">Compressor</a>
+            <a class="dropdown-item" href="Turbine.html">Turbine</a>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link active" href="Calculator.html">Calculator</a>
+
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+
+
+<section class="first-section">
+  <h1>Euler Turbomachinery Equation</h1>
+  <div class="image-wrapper">
+    <img class="engine" src="img/image-2-editted-1.2.png"/>
+  </div>
+</section>
+
+<section class='second-section container'>
+  <p>The Euler Turbomachinery equation states that the work transfer in a rotor is related to the product of the change in gas tangential velocity and the blade speed. Assuming that there is no change in the mean velocity radius and and the flow is purely axial, the equation is give by: </p>
+
+  <p>W/m = U(C<sub>θ2</sub> - C<sub>θ3</sub>)</p>
+
+  <p>Using relations for from the velocity triangles, the equation can be expressed as: </p>
+
+  <p>W/m = UC<sub>a</sub>(tanβ<sub>2</sub> - tanβ<sub>3<sub>)</p>
+
+  <br>
+  <br>
+
+  The calculator below can be used to calculate the the rate of work for a rotor.
+</section>
+
+<section class="calculator container" data-aos="fade-up">
+   <b>U</b> (m/s) <input type="number" id="U"> <br> <br>
+   <b>C<sub>a</sub></b> (m/s)  <input type="number" id="C"> <br> <br>
+   <b>α<sub>2</sub></b> (degrees) <input type="number" id="a2"> <br> <br>
+   <b>α<sub>3</sub></b> (degrees)  <input type="number" id="a3"> <br> <br>
+
+   <button type="button" name="button" onclick="euler()">Calculate</button>
+
+   <h1 id="answer"></h1>
+
+
+</class>
+
+
+
+
+<footer id="footer">
+  <a class="btn btn btn-secondary" href="https://forms.gle/fbCnCVSMDa3CNvXh9" role="button" target="_blank">Feedback</a>
+<br> <br>
+  <p>Copyright© 2020 Imperial College London</P>
+
+
+</footer>
+
+
+
+
+
+   <script>
+
+
+   function euler()
+   {
+     var field1=document.getElementById('U').value;
+     var field2=document.getElementById('C').value;
+     var field3=document.getElementById('a2').value;
+     var field4=document.getElementById('a3').value;
+
+     var result=parseFloat(field1) * parseFloat(field2) *(Math.tan(parseFloat(field3))-Math.tan(parseFloat(field4)))
+
+     if(!isNaN(result))
+     {
+       document.getElementById('answer').innerHTML='Answer: '+result+ '  J/kg';
+     }
+   }
+
+   </script>
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+   <script>
+     AOS.init();
+   </script>
+
+
+
+  </body>
+</html>

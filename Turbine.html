@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Velocity Triangles: Turbine</title>
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/turbine.css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Poppins"
+    rel="stylesheet"
+  />
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- scripts -->
+  <script src="js/turbine.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"> </script>
+
+
+
+<body>
+
+  <!-- nagivation bar -->
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+    <a class="navbar-brand" href="index.html"><b>TURBO</b>Machinery</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Gas_turbine.html">Gas Turbine</a>
+      </li>
+
+      <!-- <li> -->
+        <!-- <a class="nav-link "href="Steam_turbine.html">Steam Turbine</a> -->
+      <!-- </li> -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Velocity Triangles
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item " href="compressor.html">Compressor</a>
+          <a class="dropdown-item active" href="Turbine.html">Turbine</a>
+        </div>
+      </li>
+      <li>
+        <a class="nav-link" href="Calculator.html">Calculator</a>
+
+      </li>
+    </ul>
+  </div>
+  </div>
+</nav>
+
+
+<!-- body -->
+
+<section class="first-section">
+  <h1>Velocity Triangles: Turbines</h1>
+  <div class="image-wrapper">
+    <img class="sectioned" src="img/triangles/sectioned.png"/>
+    <img class="unsectioned" src="img/triangles/unsectioned.png"/>
+    <img class="blades" src="img/triangles/bladest.png"/>
+    <img class="labels" src="img/triangles/labelt.png"/>
+</div>
+
+
+</section>
+
+
+<section class='second-section container'>
+  <p>
+    In the turbine stage of an engine the working fluid first flows through stator then the rotor. The ducts in the stator blades decrease in area thereby acting as a nozzle. The working fluid then passes through the rotor blades where kinetic energy is converted into mechanical work.
+  </p>
+
+<iframe src="https://h5p.org/h5p/embed/878452" width="1090" height="576" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script>
+</section>
+
+<!-- Video -->
+<div class="video">
+<video  controls >
+ <source src="video/other_animation_full_draft.mp4" type="video/mp4">
+   This browser does not support MP4 videos please change wideo.
+</video>
+
+</div>
+
+<section class="example container" >
+
+  <h1>Example</h1>
+  <p>A single stage turbine has a blade speed of 600 m/s and a specific work output of 288 KJ/kg. The velocity at exit from the stage is axial. Calculate the tangential component of absolute velocity at inlet to the rotor blades.</p>
+
+  <p class= 'explanation' data-aos="fade-up" data-aos-offset="800"><i><b>Step 1:</b> List all the variables that the question gives.</i></p>
+
+  <p class="answer" data-aos="fade-up" data-aos-offset="800">  W/m: 288 KJ/Kg <br>U: 600 m/s </p>
+
+  <p class= 'explanation' data-aos="fade-up" data-aos-offset="800"><i><b>Step 2:</b> Identify the variables that the question wants you to answer.</i></p>
+
+  <p class="answer" data-aos="fade-up" data-aos-offset="800"> C<sub>θ2</sub>
+
+  <p class= 'explanation' data-aos="fade-up" data-aos-offset="800"><i><b>Step 3:</b> Draw velocity triangles for the turbine.</i></p>
+
+  <img class="cvt" data-aos="fade-up" data-aos-offset="800" src="img/triangles/turbine-velocity-triangles.jpg"/>
+
+  <p class= 'explanation' data-aos="fade-up" data-aos-offset="800"><i><b>Step 4:</b> Since the question states that the  exit velocity is purely axial, this means that C<sub>θ3</sub> = 0. Hence we can use the turbomachinery euler equation to get the answer.</i></p>
+
+  <p class="answer" data-aos="fade-up" data-aos-offset="800"> W/m = U(C<sub>θ2</sub> - <del>C<sub>θ3</sub></del>) <br> C<sub>θ2</sub> = ẇ/U</p>
+
+  <h1>Your turn.</h1>
+  <p> An axial-flow steam turbine stage operates with superheated steam, which may be assumed to expand adiabatically and reversinly. The stage inlet pressure is 90 bar and the temperature is 440<sup>o</sup>C. Calculate the stage specific work.</p>
+  <br>
+
+
+  <h3 id="right_answer"><h3>
+  <h3 id="wrong_answer"><h3>
+
+  <p class="example">
+  <b>Your answer: </b>  <input type="number" id="givenanswer"> KJ/kg (2sf) <button class="btn btn btn-secondary" type="button" name="button" onclick="turbo()">Check</button>
+  <p>
+
+</section>
+
+<script>
+
+
+function turbo()
+{
+
+  document.getElementById('right_answer').innerHTML='';
+  document.getElementById('wrong_answer').innerHTML='';
+  var result=document.getElementById('givenanswer').value;
+
+
+  if(result == 72)
+  {
+    document.getElementById('right_answer').innerHTML='Correct';
+  } else {
+    document.getElementById('wrong_answer').innerHTML='This in incorrect, try again';
+  }
+}
+
+</script>
+
+
+<footer id="footer">
+  <a class="btn btn btn-secondary" href="https://forms.gle/fbCnCVSMDa3CNvXh9" role="button" target="_blank">Feedback</a>
+<br> <br>
+  <p>Copyright© 2020 Imperial College London</P>
+
+
+</footer>
+
+
+<!-- JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.js" integrity="sha256-ZTEnMVwBY082yM/d9tFkglZux9pVgwfOAg6HD4reObU=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js" integrity="sha256-peenofh8a9TIqKdPKIeQE7mJvuwh+J0To7nslvpj1jI=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js" integrity="sha256-31FC/OT6XpfjAhj9FuXjw5/wPXXawCAjJQ29E23/XPk=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script>
+  AOS.init();
+</script>
+
+  </body>
+</html>

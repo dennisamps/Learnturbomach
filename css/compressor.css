@@ -1,0 +1,116 @@
+h1{
+  font-family: "Poppins";
+  color: #000000;
+  font-size: 35px;
+  /* font-weight: 100px; */
+  /* letter-spacing: -5px; */
+  padding: 50px  0px 0px 0px;
+  z-index: 999;
+}
+
+.first-section .image-wrapper {
+  margin-top:80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* .first-section img {
+  width: 35%;
+} */
+
+.first-section h1 {
+  color: #ffffff;
+}
+
+
+.first-section .image-wrapper img {
+  position: absolute;
+}
+
+.first-section {
+  background: linear-gradient(180deg, #271f52 75%, #ffffff 25%);
+  width : 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+
+}
+
+.sectioned {
+  /* padding-left: 15%; */
+}
+
+.unsectioned{
+  /* padding-left: 15%; */
+}
+
+.second-section{
+  text-align: center;
+  font-size: 20px;
+}
+
+.second-section{
+  padding-top: 150px;
+  padding-bottom: 50px;
+}
+
+.second-section p{
+  padding-bottom: 30px;
+}
+
+.video{
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.example h1{
+  text-align: center;
+  color: #000000;
+}
+.example p{
+  text-align: center;
+  font-size: 20px;
+}
+
+.example .explanation{
+  text-align: left;
+  font-size: 17px;
+}
+
+.cvt{
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#right_answer {
+    text-align: center;
+  color:  #09AA00;
+}
+
+#wrong_answer {
+    text-align: center;
+  color:  #FF0000;
+}
+#footer {
+
+  background-color: #444444;
+  text-align: center;
+
+  padding-top: 10px;
+
+  padding-bottom: 10px;
+
+}
+
+#footer p{
+  color: #303030;
+}

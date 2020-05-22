@@ -1,0 +1,27 @@
+html, body{
+  height: 100%;
+}
+
+.container {
+  min-height:100%;
+}
+
+.main {
+  overflow: auto;
+  padding-bottom: 30px;
+}
+
+#footer {
+
+  background-color: #444444;
+  text-align: center;
+
+  padding-top: 10px;
+
+  padding-bottom: 10px;
+
+}
+
+#footer p{
+  color: #303030;
+}
