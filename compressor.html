@@ -129,7 +129,10 @@
   <h3 id="wrong_answer"><h3>
 
   <p class="example">
-  <b>Your answer: </b>  <input type="number" id="givenanswer"> <sup>o</sup>(2sf) <button class="btn btn btn-secondary" type="button" name="button" onclick="comp()">Check</button>
+  <b>C<sub>3</sub>: </b>  <input type="number" id="absolute_velocity"> m/s (1dp)<br><br>
+  <b>β<sub>3</sub>: </b>  <input type="number" id="beta"> <sup>o</sup> (1dp)
+  <br>
+  <button class="btn btn btn-secondary" type="button" name="button" onclick="comp()">Check</button>
   <p>
 
 </section>
@@ -151,10 +154,10 @@ function comp()
 
   document.getElementById('right_answer').innerHTML='';
   document.getElementById('wrong_answer').innerHTML='';
-  var result=document.getElementById('givenanswer').value;
+  var absolute=document.getElementById('absolute_velocity').value;
+  var beta=document.getElementById('beta').value;
 
-
-  if(result == 36)
+  if(absolute == 202.1 && beta == -28.5)
   {
     document.getElementById('right_answer').innerHTML='Correct';
   } else {
