@@ -23,6 +23,10 @@ h1{
   color: #ffffff;
 }
 
+.first-section h5{
+  font-family: "Poppins";
+  color: #ffffff;
+}
 
 .first-section .image-wrapper img {
   position: absolute;
