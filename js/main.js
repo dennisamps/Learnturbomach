@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded',() => {
 		duration: '500',
 		offset: '50px'
 	})
-	.addIndicators()
+	// .addIndicators()
 	.setTween(timeline1)
 	.setPin('.first-section')
 	.addTo(controller);

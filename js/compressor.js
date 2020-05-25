@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     triggerHook: 0,
     // offset: '40'
   })
-  .addIndicators()
+  // .addIndicators()
 	.setTween(timeline1)
   .setPin('.first-section')
 	.addTo(controller);
