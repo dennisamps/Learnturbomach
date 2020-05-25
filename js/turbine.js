@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
   .from('.blades', 6, {
     autoAlpha: 0
   })
+  .from('.blades2', 6, {
+    autoAlpha: 0
+  })
   .from('.labels', 6, {
     autoAlpha: 0
   })
