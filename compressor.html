@@ -13,6 +13,7 @@
       />
       <!-- scripts -->
       <script src="js/compressor.js"></script>
+      <script src="js/compressor_calculations.js"></script>
 
       <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"> </script>
@@ -89,12 +90,15 @@
 <div class="video">
 <video  controls >
  <source src="video/other_animation_full_draft.mp4" type="video/mp4">
-   This browser does not support MP4 videos please change wideo.
+   This browser does not support MP4 videos please change video.
 </video>
 
 <!-- <iframe src="https://h5p.org/h5p/embed/771215" width="100%"  frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script> -->
 
 </div>
+
+
+
 
 <section class="example container">
   <h1>Example</h1>
@@ -124,22 +128,173 @@
 
   <p class="answer"> W<sub>1</sub> = (C<sub>a</sub><sup>2</sup> + W<sub>θ1</sub><sup>2</sup>)<sup>1/2</sup> <br> W<sub>1</sub> = <red>368.1 m/s</red> <br><br> β<sub>1</sub> = tan<sup>-1</sup> ( W<sub>θ1</sub> / C<sub>a</sub> ) <br> β<sub>1</sub> = 49.9<sup>o</sup></p>
 
-  <h1>Your turn.</h1>
-  <p>In an axial-flow air compressor sage, the stagnation temperature of the air increases by 40k. The compression processes may be assumed adiabatic and air may be treated as a perfect gas. At the mean diameter, the blade speed is 230 m/s and the axialcomponent of air velocity is 100 m/s throughout the stage. At the inlet to the rotor blade row, the absolute air velocity gas no tangential component. For the mean diameter position at the exit from the rotor blade row, evaluate the magnitude of the absolute gas velocity. Find the angle between the axial direction and the air velocity relative ti the rotor blades.</p>
-  <br>
-
-
-  <h3 id="right_answer"><h3>
-  <h3 id="wrong_answer"><h3>
-
-  <p class="example">
-  <b>C<sub>3</sub>: </b>  <input type="number" id="absolute_velocity"> m/s (1dp)<br><br>
-  <b>β<sub>3</sub>: </b>  <input type="number" id="beta"> <sup>o</sup> (1dp)
-  <br>
-  <button class="btn btn btn-secondary" type="button" name="button" onclick="comp()">Check</button>
-  <p>
-
 </section>
+
+
+
+  <section class="assisted_help ">
+
+<div class="container">
+
+
+  <h1>Your turn.... with a little bit of help</h1>
+  <p>In an axial-flow air compressor sage, the stagnation temperature of the air increases by 40k. The compression processes may be assumed adiabatic and air may be treated as a perfect gas. At the mean diameter, the blade speed is 230 m/s and the axial component of air velocity is 100 m/s throughout the stage. At the inlet to the rotor blade row, the absolute air velocity gas no tangential component. For the mean diameter position at the exit from the rotor blade row, evaluate the magnitude of the absolute gas velocity. Find the angle between the axial direction and the air velocity relative to the rotor blades.</p>
+  <br>
+
+  <p class= 'explanation'><i><b>Step 1:</b> Tick all the variables that the question gives.</i></p>
+
+  <div class="check_box">
+    <label><input type="checkbox" id='chb1'>T<sub>2</sub> - T<sub>3</sub> </label>
+    <label><input type="checkbox" id='chb2'>C<sub>a</sub>  </label>
+    <label><input type="checkbox" id='chb3'>α<sub>3</sub>  </label>
+    <label><input type="checkbox" id='chb4'>W<sub>θ3</sub>  </label>
+    <label><input type="checkbox" id='chb5'>U</label>
+
+  </div>
+
+  <div class="check">
+    <h6  class='right_answer' id="chb1_right_answer"><h6>
+    <h6  class='wrong_answer' id="chb1_wrong_answer"><h6>
+    <button class="btn btn btn-secondary" type="button" name="button" onclick="checked1()">Check</button>
+  </div>
+
+
+
+  <p class= 'explanation'><i><b>Step 2:</b> Identify the variables that the question wants you to answer.</i></p>
+
+  <div class="check_box">
+    <label><input type="checkbox" id='chb6'>β<sub>3</sub> </label>
+    <label><input type="checkbox" id='chb7'>C<sub>θ3</sub>  </label>
+    <label><input type="checkbox" id='chb8'>α<sub>2</sub>  </label>
+    <label><input type="checkbox" id='chb9'>W<sub>θ3</sub>  </label>
+    <label><input type="checkbox" id='chb10'>C<sub>3</sub></label>
+
+  </div>
+
+  <div class="check">
+    <h6  class='right_answer' id="chb2_right_answer"><h6>
+    <h6  class='wrong_answer' id="chb2_wrong_answer"><h6>
+    <button class="btn btn-secondary" type="button" name="button" onclick="checked2()">Check</button>
+  </div>
+
+  <p class= 'explanation'><i><b>Step 3:</b> Choose the velocity triangles</i></p>
+
+<div class="question_images">
+
+  <ul>
+  <li>
+    <input type="checkbox" id="myCheckbox1">
+    <label for="myCheckbox1"><img src="img/combuster_choices/correct.png"/></label>
+  </li>
+  <li>
+
+    <input type="checkbox" id="myCheckbox2">
+    <label for="myCheckbox2"><img src="img/combuster_choices/wrong1.png"/></label>
+  </li>
+</ul>
+
+
+</div>
+  <div class="check">
+    <h6  class='right_answer' id="pic_right_answer"><h6>
+    <h6  class='wrong_answer' id="pic_wrong_answer"><h6>
+    <button class="btn btn btn-secondary" type="button" name="button" onclick="pic()">Check</button>
+  </div>
+
+  <p class= 'explanation'><i><b>Step 4:</b> Calculate the specific work using the SFEE Equation</i></p>
+
+
+  <p class="answer"> ẇ = h<sub>02</sub> - h<sub>03</sub> = C<sub>p</sub>(T<sub>02</sub> - T<sub>03</sub>)</p>
+
+    <div class="check">
+      <h6  class='right_answer' id="work_right_answer"><h6>
+      <h6  class='wrong_answer' id="work_wrong_answer"><h6>
+      <b>ẇ: </b>  <input type="text" id="work"> KJ/Kg (1dp)
+      <button class="btn btn btn-secondary" type="button" name="button" onclick="work()">Check</button>
+    </div>
+
+
+  <p class= 'explanation'><i><b>Step 5:</b> Use turbomachinery Euler equation to find C<sub>θ3</sub></i></p>
+
+  <p class="answer"> ẇ = U(C<sub>θ2</sub> - C<sub>θ3</sub>)</p>
+
+  <div class="check">
+    <h6  class='right_answer' id="Ctheta_right_answer"><h6>
+    <h6  class='wrong_answer' id="Ctheta_wrong_answer"><h6>
+    <b>C<sub>θ3</sub>: </b>  <input type="text" id="Ctheta"> m/s (1dp)
+    <button class="btn btn btn-secondary" type="button" name="button" onclick="Ctheta()">Check</button>
+  </div>
+
+
+  <p class= 'explanation'><i><b>Step 6:</b> Use vector math to find W<sub>θ3</sub></i></p>
+
+  <p class="answer"> W<sub>θ3</sub> = C<sub>θ3</sub> - U</p>
+
+  <div class="check">
+    <h6  class='right_answer' id="Wtheta_right_answer"><h6>
+    <h6  class='wrong_answer' id="Wtheta_wrong_answer"><h6>
+    <b>W<sub>θ3</sub>: </b>  <input type="text" id="Wtheta"> m/s (1dp)
+    <button class="btn btn btn-secondary" type="button" name="button" onclick="Wtheta()">Check</button>
+  </div>
+
+<p class= 'explanation'><i><b>Step 7:</b> Use trignometry to find β<sub>3</sub></i></p>
+
+<p class="answer"> W<sub>θ3</sub> = C<sub>θ3</sub> - U</p>
+
+<div class="check">
+  <h6  class='right_answer' id="beta_right_answer"><h6>
+  <h6  class='wrong_answer' id="beta_wrong_answer"><h6>
+  <b>β<sub>3</sub>: </b>  <input type="text" id="beta"> m/s (1dp)
+  <button class="btn btn btn-secondary" type="button" name="button" onclick="beta()">Check</button>
+</div>
+</section>
+
+
+<section class="section_5">
+<div class="container your_turn">
+  <h1>Your turn</h1>
+  <p>
+    Air at 288 K and 101.3 kPa enters an axial compressor without inlet guide vanes.
+The axial velocity in the compressor is Ca = 170 m/s. The compressor rotates at
+8,000 rpm and it has a tip diameter of 66.0 cm and a hub diameter of 45.7 cm.
+The air enters the rotor and leaves the stator in the axial direction. The turning
+of the air in the rotor is 15◦. Air can be treated as a perfect gas with γ = 1.4.
+  </p>
+
+  <p class="answer">Calculate the mass flow rate through the compressor.</p>
+
+  <div class="check">
+    <h6  class='right_answer' id="comp1_right_answer"><h6>
+    <h6  class='wrong_answer' id="comp1_wrong_answer"><h6>
+    <b>β<sub>3</sub>: </b>  <input type="text" id="comp1"> m/s (1dp)
+    <button class="btn btn btn-secondary" type="button" name="button" onclick="comp1()">Check</button>
+  </div>
+
+  <p class="answer">Calculate the power required to run the compressor.</p>
+
+  <div class="check">
+    <h6  class='right_answer' id="comp2_right_answer"><h6>
+    <h6  class='wrong_answer' id="comp2_wrong_answer"><h6>
+    <b>β<sub>3</sub>: </b>  <input type="text" id="comp2"> m/s (1dp)
+    <button class="btn btn btn-secondary" type="button" name="button" onclick="comp2()">Check</button>
+  </div>
+
+  <p class="answer">Give the total to total pressure ratio if the compressor is assumed to
+be ideal.</p>
+
+<div class="check">
+  <h6  class='right_answer' id="comp3_right_answer"><h6>
+  <h6  class='wrong_answer' id="comp3_wrong_answer"><h6>
+  <b>β<sub>3</sub>: </b>  <input type="text" id="comp3"> m/s (1dp)
+  <button class="btn btn btn-secondary" type="button" name="button" onclick="comp3()">Check</button>
+</div>
+
+
+
+
+</div>
+</section>
+
 
 
 <footer id="footer">
@@ -150,26 +305,7 @@
 
 </footer>
 
-<script>
 
-
-function comp()
-{
-
-  document.getElementById('right_answer').innerHTML='';
-  document.getElementById('wrong_answer').innerHTML='';
-  var absolute=document.getElementById('absolute_velocity').value;
-  var beta=document.getElementById('beta').value;
-
-  if(absolute == 202.1 && beta == -28.5)
-  {
-    document.getElementById('right_answer').innerHTML='Correct';
-  } else {
-    document.getElementById('wrong_answer').innerHTML='This in incorrect, try again';
-  }
-}
-
-</script>
 
 
 

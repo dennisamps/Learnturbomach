@@ -91,22 +91,149 @@ h1{
 .example img{
   width: 30%;
   display: inline-block;
-.cvt{
   width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#right_answer {
-    text-align: center;
+.assisted_help {
+  background-color: #EDEDED;
+}
+
+.assisted_help h1{
+  text-align: center;
+}
+
+.assisted_help label{
+
+  padding-right: 20px;
+  align-items: center;
+}
+
+/* the image textbox */
+
+.question_images ul {
+  list-style-type: none;
+}
+
+.question_images li {
+  display: inline-block;
+}
+
+.question_images input[type="checkbox"][id^="myCheckbox"] {
+  display: none;
+}
+
+.question_images label {
+  border: 1px solid #fff;
+  padding: 10px;
+  display: block;
+  position: relative;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.question_images label:before {
+  background-color: white;
+  color: white;
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  border: 1px solid grey;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 28px;
+  transition-duration: 0.4s;
+  transform: scale(0);
+}
+
+.question_images label img {
+  height: 200px;
+  width: 200px;
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
+}
+
+:checked + label {
+  border-color: #ddd;
+}
+
+:checked + label:before {
+  content: "✓";
+  background-color: grey;
+  transform: scale(1);
+}
+
+:checked + label img {
+  transform: scale(0.9);
+
+  z-index: -1;
+}
+
+
+/*  */
+
+
+
+.check_box{
+  text-align: center;
+}
+
+.assisted_help p{
+  text-align: center;
+  font-size: 20px;
+}
+
+.assisted_help .explanation{
+  text-align: left;
+  font-size: 17px;
+
+}
+
+.example img{
+  width: 30%;
+  display: inline-block;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.section_5{
+  background-color: #272151;
+  padding-bottom: 30px;
+}
+.section_5 h1{
+  color: white;
+  text-align: center;
+}
+.section_5 p{
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+.check {
+  text-align: right;
+}
+
+.right_answer {
   color:  #09AA00;
 }
 
-#wrong_answer {
-    text-align: center;
+.wrong_answer {
   color:  #FF0000;
 }
+
+
+
+
 #footer {
 
   background-color: #444444;
@@ -117,6 +244,8 @@ h1{
   padding-bottom: 10px;
 
 }
+
+
 
 #footer p{
   color: #303030;
