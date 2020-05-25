@@ -14,7 +14,9 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- scripts -->
   <script src="js/turbine.js"></script>
+  <script src="js/turbine_calculations.js"></script>
 
+.
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"> </script>
 
@@ -95,10 +97,14 @@
 <div class="video">
 <video  controls >
  <source src="video/other_animation_full_draft.mp4" type="video/mp4">
-   This browser does not support MP4 videos please change wideo.
+   This browser does not support MP4 videos please change video.
 </video>
 
 </div>
+
+
+
+
 
 <section class="example container" >
 
@@ -121,41 +127,161 @@
 
   <p class="answer" data-aos="fade-up" data-aos-offset="800"> W/m = U(C<sub>θ2</sub> - <del>C<sub>θ3</sub></del>) <br> C<sub>θ2</sub> = ẇ/U</p>
 
-  <h1>Your turn.</h1>
-  <p> An axial-flow steam turbine stage operates with superheated steam, which may be assumed to expand adiabatically and reversibly. The stage inlet pressure is 90 bar and the temperature is 440<sup>o</sup>C. Calculate the stage specific work.</p>
-  <br>
-
-
-  <h3 id="right_answer"><h3>
-  <h3 id="wrong_answer"><h3>
-
-  <p class="example">
-  <b>Your answer: </b>  <input type="number" id="givenanswer"> KJ/kg (2sf) <button class="btn btn btn-secondary" type="button" name="button" onclick="turbo()">Check</button>
-  <p>
-
 </section>
 
-<script>
 
 
-function turbo()
-{
+<section class="assisted_help">
+  <div class="container">
 
-  document.getElementById('right_answer').innerHTML='';
-  document.getElementById('wrong_answer').innerHTML='';
-  var result=document.getElementById('givenanswer').value;
+    <h1>Your turn.... with a little bit of help</h1>
+
+    <p>Consider an axial turbine stage. The flow enters the nozzle row of the stage with axial velocity of 170 m/s. The turbine
+rotational speed is 14000 rpm, the blade mean diameter is 483 mm, the nozzle
+exit flow angle is 72 degrees and the rotor outlet flow is in the axial direction. You
+may assume the turbine is isentropic.
+Assume that the air enters and leaves the blades at the blade angle and that the
+axial velocity remains constant throughout the stage. Calculate the work and power developed by the stage based on the mean
+diameter conditions. </p>
+    <br>
+
+    <p class= 'explanation'><i><b>Step 1:</b> Tick all the variables that the question gives.</i></p>
+
+    <div class="check_box">
+      <label><input type="checkbox" id='chb1'>ẇ<sub>a</sub></label>
+      <label><input type="checkbox" id='chb2'>D<sub>m</sub>  </label>
+      <label><input type="checkbox" id='chb3'>α<sub>3</sub>  </label>
+      <label><input type="checkbox" id='chb4'>W<sub>θ3</sub>  </label>
+      <label><input type="checkbox" id='chb5'>U</label>
+      <label><input type="checkbox" id='chb6'>α<sub>2</sub>  </label>
+    </div>
+
+    <div class="check">
+      <h6  class='right_answer' id="chb1_right_answer"><h6>
+      <h6  class='wrong_answer' id="chb1_wrong_answer"><h6>
+      <button class="btn btn btn-secondary" type="button" name="button" onclick="checked1()">Check</button>
+    </div>
 
 
-  if(result == 72)
-  {
-    document.getElementById('right_answer').innerHTML='Correct';
-  } else {
-    document.getElementById('wrong_answer').innerHTML='This in incorrect, try again';
-  }
-}
+    <p class= 'explanation'><i><b>Step 2:</b> Identify the variables that the question wants you to find.</i></p>
 
-</script>
+    <div class="check_box">
+      <label><input type="checkbox" id='chb6'>ẇ</label>
+      <label><input type="checkbox" id='chb7'>C<sub>θ3</sub>  </label>
+      <label><input type="checkbox" id='chb8'>α<sub>2</sub>  </label>
+      <label><input type="checkbox" id='chb9'>W<sub>θ3</sub>  </label>
+      <label><input type="checkbox" id='chb10'>C<sub>3</sub></label>
 
+    </div>
+
+    <div class="check">
+      <h6  class='right_answer' id="chb2_right_answer"><h6>
+      <h6  class='wrong_answer' id="chb2_wrong_answer"><h6>
+      <button class="btn btn-secondary" type="button" name="button" onclick="checked2()">Check</button>
+    </div>
+
+
+    <p class= 'explanation'><i><b>Step 3:</b>Draw velocity triangle for the turbine.</i></p>
+
+
+    <img src="" alt="">
+
+
+
+    <p class= 'explanation'><i><b>Step 4:</b> Calculate the absolute velocity,C<sub>2</sub> </i></p>
+
+
+    <!-- <p class="answer"> U = D<sub>m</sub> x π x (Blade speed(rev/s)/60)</p> -->
+
+      <div class="check">
+        <h6  class='right_answer' id="C2_right_answer"><h6>
+        <h6  class='wrong_answer' id="C2_wrong_answer"><h6>
+        <b>C<sub>2</sub>: </b>  <input type="text" id="C2"> m/s (3sf)
+        <button class="btn btn btn-secondary" type="button" name="button" onclick="C2()">Check</button>
+      </div>
+
+
+    <p class= 'explanation'><i><b>Step 5:</b> Calculate the tangential blade speed at the mean diameter</i></p>
+
+
+    <p class="answer"> U = D<sub>m</sub> x π x (Blade speed(rev/s)/60)</p>
+
+      <div class="check">
+        <h6  class='right_answer' id="speed_right_answer"><h6>
+        <h6  class='wrong_answer' id="speed_wrong_answer"><h6>
+        <b>U: </b>  <input type="text" id="speed"> m/s (1dp)
+        <button class="btn btn btn-secondary" type="button" name="button" onclick="speed()">Check</button>
+      </div>
+
+      <p class= 'explanation'><i><b>Step 6:</b> Use trigonometry to find the tangential component of the absolute velocity, C<sub>θ2</sub></i></p>
+
+      <!-- <p class="answer"> ẇ = U(C<sub>θ2</sub> - C<sub>θ3</sub>)</p> -->
+
+      <div class="check">
+        <h6  class='right_answer' id="Ctheta2_right_answer"><h6>
+        <h6  class='wrong_answer' id="Ctheta2_wrong_answer"><h6>
+        <b>C<sub>θ2</sub>: </b>  <input type="text" id="Ctheta2"> m/s (1dp)
+        <button class="btn btn btn-secondary" type="button" name="button" onclick="Ctheta2()">Check</button>
+      </div>
+
+      <p class= 'explanation'><i><b>Step 7:</b> Use trigonometry to find the relative angle β<sub>2</sub></i></p>
+
+      <!-- <p class="answer"> W<sub>θ3</sub> = C<sub>θ3</sub> - U</p> -->
+
+      <div class="check">
+        <h6  class='right_answer' id="beta2_right_answer"><h6>
+        <h6  class='wrong_answer' id="beta2_wrong_answer"><h6>
+        <b>β<sub>2</sub>: </b>  <input type="text" id="beta2"> <sup>o</sup> (1dp)
+        <button class="btn btn btn-secondary" type="button" name="button" onclick="beta2()">Check</button>
+      </div>
+
+      <p class= 'explanation'><i><b>Step 8:</b> Use trigonometry to find the relative angle β<sub>3</sub></i></p>
+
+      <!-- <p class="answer"> W<sub>θ3</sub> = C<sub>θ3</sub> - U</p> -->
+
+      <div class="check">
+        <h6  class='right_answer' id="beta3_right_answer"><h6>
+        <h6  class='wrong_answer' id="beta3_wrong_answer"><h6>
+        <b>β<sub>3</sub>: </b>  <input type="text" id="beta3"> <sup>o</sup> (1dp)
+        <button class="btn btn btn-secondary" type="button" name="button" onclick="beta3()">Check</button>
+      </div>
+
+      <p class= 'explanation'><i><b>Step 9:</b> Use turbomachinery Euler equation to calculate specific work, ẇ.</i></p>
+
+      <!-- <p class="answer"> W<sub>θ3</sub> = C<sub>θ3</sub> - U</p> -->
+
+      <div class="check">
+        <h6  class='right_answer' id="work_right_answer"><h6>
+        <h6  class='wrong_answer' id="work_wrong_answer"><h6>
+        <b>ẇ: </b>  <input type="text" id="work"> J/Kg (1dp)
+        <button class="btn btn-secondary" type="button" name="button" onclick="work()">Check</button>
+      </div>
+
+  </div>
+</section>
+
+
+
+
+<section class="section_5">
+  <div class="container your_turn">
+    <h1>Your turn.</h1>
+    <p> An axial-flow steam turbine stage operates with superheated steam, which may be assumed to expand adiabatically and reversibly. The stage inlet pressure is 90 bar and the temperature is 440<sup>o</sup>C. Calculate the stage specific work.</p>
+    <br>
+
+
+    <h3 id="right_answer"><h3>
+    <h3 id="wrong_answer"><h3>
+
+      <div class="check">
+        <h6  class='right_answer' id="turbo_right_answer"><h6>
+        <h6  class='wrong_answer' id="turbo_wrong_answer"><h6>
+        <b>ẇ: </b>  <input type="text" id="turbo"> m/s (1dp)
+        <button class="btn btn-secondary" type="button" name="button" onclick="turbo()">Check</button>
+      </div>
+
+  </div>
+</section>
 
 <footer id="footer">
   <a class="btn btn btn-secondary" href="https://forms.gle/fbCnCVSMDa3CNvXh9" role="button" target="_blank">Feedback</a>
