@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/calculator.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <!-- scripts -->
+    <!-- <script .js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"> </script>
+
+  </head>
+  <body>
+    <!-- nagivation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+      <a class="navbar-brand" href="index.html"><b>TURBO</b>Machinery</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Gas_turbine.html">Gas Turbine</a>
+        </li>
+
+        <!-- <li> -->
+          <!-- <a class="nav-link "href="Steam_turbine.html"> Steam Turbine</a> -->
+        <!-- </li> -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Velocity Triangles
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="compressor.html">Compressor</a>
+            <a class="dropdown-item" href="Turbine.html">Turbine</a>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link active" href="Calculator.html">Calculator</a>
+
+        </li>
+        <li>
+          <a class="nav-link" href="https://forms.gle/fbCnCVSMDa3CNvXh9" target="_blank">Feedback</a>
+
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+
+<a rel='nofollow' href='https://www.qr-code-generator.com' border='0' style='cursor:default'></a><img src='https://chart.googleapis.com/chart?cht=qr&chl=http%3A%2F%2Fdennisamps.github.io%2FLearnturbomach%2FCamera.html&chs=180x180&choe=UTF-8&chld=L|2' alt=''>
+
+<footer id="footer">
+  <a class="btn btn btn-secondary" href="https://forms.gle/fbCnCVSMDa3CNvXh9" role="button" target="_blank">Feedback</a>
+<br> <br>
+  <p>Copyright© 2020 Imperial College London</P>
+
+
+</footer>
+
+
+
+
+
+   <script>
+
+
+   function euler()
+   {
+     var field1=document.getElementById('U').value;
+     var field2=document.getElementById('C').value;
+     var field3=document.getElementById('a2').value;
+     var field4=document.getElementById('a3').value;
+
+     var result=parseFloat(field1) * parseFloat(field2) *(Math.tan(parseFloat(field3))-Math.tan(parseFloat(field4)))
+
+     if(!isNaN(result))
+     {
+       document.getElementById('answer').innerHTML='Answer: '+result+ '  J/kg';
+     }
+   }
+
+   </script>
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+   <script>
+     AOS.init();
+   </script>
+
+
+
+  </body>
+</html>
