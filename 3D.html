@@ -26,6 +26,9 @@
         hlight = new THREE.AmbientLight (0x404040,100);
         scene.add(hlight);
 
+        directionalLight = new THREE.directionalLight(0xffffff,100)
+        directionalLight.posiyo = new THREE.directionalLight(0xffffff,100)
+
         renderer = new THREE.WebGLRenderer({antialias:true});
         renderer.setSize(window.innerWidth,window.innerHeight);
         document.body.appendChild(renderer.domElement);
