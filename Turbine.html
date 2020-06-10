@@ -85,6 +85,7 @@
 
 <section class="first-section">
   <h1>Velocity Triangles: Turbines</h1>
+<h7>This page shows you how the velocity triangles align with the blades in radial view. There are also exam questions to assist with you understanding.</h7>
   <div class="image-wrapper">
     <img class="sectioned" src="img/triangles/sectioned.png"/>
     <img class="unsectioned" src="img/triangles/unsectioned.png"/>
@@ -123,21 +124,21 @@
   <h1>Example</h1>
   <p>A single stage turbine has a blade speed of 600 m/s and a specific work output of 288 KJ/kg. The velocity at exit from the stage is axial. Calculate the tangential component of absolute velocity at inlet to the rotor blades.</p>
 
-  <p class= 'explanation' data-aos="fade-up" data-aos-offset="800"><i><b>Step 1:</b> List all the variables that the question gives.</i></p>
+  <p class= 'explanation' ><i><b>Step 1:</b> List all the variables that the question gives.</i></p>
 
-  <p class="answer" data-aos="fade-up" data-aos-offset="800">  W/m: 288 KJ/Kg <br>U: 600 m/s </p>
+  <p class="answer" >  W/m: 288 KJ/Kg <br>U: 600 m/s </p>
 
-  <p class= 'explanation' data-aos="fade-up" data-aos-offset="800"><i><b>Step 2:</b> Identify the variables that the question wants you to answer.</i></p>
+  <p class= 'explanation' ><i><b>Step 2:</b> Identify the variables that the question wants you to answer.</i></p>
 
-  <p class="answer" data-aos="fade-up" data-aos-offset="800"> C<sub>θ2</sub>
+  <p class="answer" > C<sub>θ2</sub>
 
-  <p class= 'explanation' data-aos="fade-up" data-aos-offset="800"><i><b>Step 3:</b> Draw velocity triangles for the turbine.</i></p>
+  <p class= 'explanation' ><i><b>Step 3:</b> Draw velocity triangles for the turbine.</i></p>
 
-  <img class="cvt" data-aos="fade-up" data-aos-offset="800" src="img/triangles/turbine-velocity-triangles.jpg"/>
+  <img class="cvt"  src="img/triangles/turbine-velocity-triangles.jpg"/>
 
-  <p class= 'explanation' data-aos="fade-up" data-aos-offset="800"><i><b>Step 4:</b> Since the question states that the  exit velocity is purely axial, this means that C<sub>θ3</sub> = 0. Hence we can use the turbomachinery euler equation to get the answer.</i></p>
+  <p class= 'explanation' ><i><b>Step 4:</b> Since the question states that the  exit velocity is purely axial, this means that C<sub>θ3</sub> = 0. Hence we can use the turbomachinery euler equation to get the answer.</i></p>
 
-  <p class="answer" data-aos="fade-up" data-aos-offset="800"> W/m = U(C<sub>θ2</sub> - <del>C<sub>θ3</sub></del>) <br> C<sub>θ2</sub> = ẇ/U</p>
+  <p class="answer" > W/m = U(C<sub>θ2</sub> - <del>C<sub>θ3</sub></del>) <br> C<sub>θ2</sub> = ẇ/U</p>
 
 </section>
 
@@ -196,7 +197,7 @@ diameter conditions. </p>
     <p class= 'explanation'><i><b>Step 3:</b>Draw velocity triangle for the turbine.</i></p>
 
 
-    <img src="" alt="">
+    <img src="img/combuster_choices/wrong1.png" alt="image of turbine blade questions">
 
 
 
@@ -285,10 +286,10 @@ diameter conditions. </p>
     <h3 id="right_answer"><h3>
     <h3 id="wrong_answer"><h3>
 
-      <div class="check">
+      <div class="check check_last">
         <h6  class='right_answer' id="turbo_right_answer"><h6>
         <h6  class='wrong_answer' id="turbo_wrong_answer"><h6>
-        <b>ẇ: </b>  <input type="text" id="turbo"> m/s (1dp)
+        <input type="text" id="turbo"> J/kg (1dp)
         <button class="btn btn-secondary" type="button" name="button" onclick="turbo()">Check</button>
       </div>
 
@@ -298,7 +299,11 @@ diameter conditions. </p>
 <footer id="footer">
   <a class="btn btn btn-secondary" href="https://forms.gle/fbCnCVSMDa3CNvXh9" role="button" target="_blank">Feedback</a>
 <br> <br>
+
+
   <p>Copyright© 2020 Imperial College London</P>
+
+    <img src="img/logo.png" alt="Imperial logo">
 
 
 </footer>
@@ -322,9 +327,7 @@ diameter conditions. </p>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-<script>
-  AOS.init();
-</script>
+
 
   </body>
 </html>

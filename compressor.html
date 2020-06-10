@@ -81,6 +81,7 @@
 
     <section class="first-section">
       <h1>Velocity Triangles: Compressors</h1>
+      <h7>This page shows you how the velocity triangles align with the blades in radial view. There are also exam questions to assist with you understanding.</h7>
       <div class="image-wrapper">
         <img class="sectioned" src="img/triangles/sectioned.png" alt="Image of the sectioned gas turbine model.">
         <img class="unsectioned" src="img/triangles/unsectioned.png"/>
@@ -190,22 +191,21 @@
     <button class="btn btn-secondary" type="button" name="button" onclick="checked2()">Check</button>
   </div>
 
-  <p class= 'explanation'><i><b>Step 3:</b> Choose the velocity triangles</i></p>
+  <p class= 'explanation'><i><b>Step 3:</b> Choose the correct velocity triangles</i></p>
 
 <div class="question_images">
 
-  <ul>
-  <li>
-    <input type="checkbox" id="myCheckbox1">
-    <label for="myCheckbox1"><img src="img/combuster_choices/correct1.png"/></label>
-  </li>
-  <li>
 
-    <input type="checkbox" id="myCheckbox2">
-    <label for="myCheckbox2"><img src="img/combuster_choices/wrong1.png"/></label>
-  </li>
-</ul>
 
+    <div class="imagesss">
+
+      <label for="myCheckbox1"><input type="checkbox" id="myCheckbox1"><img src="img/combuster_choices/correct1.png"/></label>
+    </div>
+        <br>
+    <div class="imagesss">
+
+      <label for="myCheckbox2"><input type="checkbox" id="myCheckbox2"><img src="img/combuster_choices/wrong1.png"/></label>
+    </div>
 
 </div>
   <div class="check">
@@ -276,19 +276,23 @@ of the air in the rotor is 15◦. Air can be treated as a perfect gas with γ = 
 
   <p class="answer">Calculate the mass flow rate through the compressor.</p>
 
-  <div class="check">
+  <div class="check check_last">
     <h6  class='right_answer' id="comp1_right_answer"><h6>
     <h6  class='wrong_answer' id="comp1_wrong_answer"><h6>
-    <b>β<sub>3</sub>: </b>  <input type="text" id="comp1"> m/s (1dp)
+    <input type="text" id="comp1"> m/s (1dp)
+    <br>
+    <br>
     <button class="btn btn btn-secondary" type="button" name="button" onclick="comp1()">Check</button>
   </div>
 
   <p class="answer">Calculate the power required to run the compressor.</p>
 
-  <div class="check">
+  <div class="check check_last">
     <h6  class='right_answer' id="comp2_right_answer"><h6>
     <h6  class='wrong_answer' id="comp2_wrong_answer"><h6>
-    <b>β<sub>3</sub>: </b>  <input type="text" id="comp2"> m/s (1dp)
+    <input type="text" id="comp2"> J/Kg (1dp)
+    <br>
+    <br>
     <button class="btn btn btn-secondary" type="button" name="button" onclick="comp2()">Check</button>
   </div>
 
@@ -298,13 +302,15 @@ be ideal.</p>
 <div class="check">
   <h6  class='right_answer' id="comp3_right_answer"><h6>
   <h6  class='wrong_answer' id="comp3_wrong_answer"><h6>
-  <b>β<sub>3</sub>: </b>  <input type="text" id="comp3"> m/s (1dp)
+  <input type="text" id="comp3">
+  <br>
+  <br>
   <button class="btn btn btn-secondary" type="button" name="button" onclick="comp3()">Check</button>
 </div>
 
 
 
-
+<!-- <a class="btn btn btn-secondary" href= ".navbar" role="button">Back To Top</a> -->
 </div>
 </section>
 
@@ -314,6 +320,7 @@ be ideal.</p>
   <a class="btn btn btn-secondary" href="https://forms.gle/fbCnCVSMDa3CNvXh9" role="button" target="_blank">Feedback</a>
 <br> <br>
   <p>Copyright© 2020 Imperial College London</P>
+    <img src="img/logo.png" alt="Imperial logo">
 
 
 </footer>

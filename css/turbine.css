@@ -28,6 +28,11 @@ h1{
   color: #ffffff;
 }
 
+h7 {
+  font-family: "Poppins";
+  color: #ffffff;
+}
+
 .first-section .image-wrapper img {
   position: absolute;
 }
@@ -128,6 +133,19 @@ h1{
 }
 
 
+
+.assisted_help img{
+  width: 40%;
+  display: block;
+  margin: 0 auto 0 auto;
+
+}
+
+
+.check_last{
+  color: white;
+}
+
 .check {
   text-align: right;
 }
@@ -166,6 +184,8 @@ h1{
 #footer {
 
   background-color: #444444;
+
+
   text-align: center;
 
   padding-top: 10px;
@@ -175,5 +195,9 @@ h1{
 }
 
 #footer p{
-  color: #303030;
+  color: white;
+}
+
+#footer img{
+  width: 200px;
 }

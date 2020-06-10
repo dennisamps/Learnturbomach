@@ -23,6 +23,11 @@ h1{
   color: #ffffff;
 }
 
+h7 {
+  font-family: "Poppins";
+  color: #ffffff;
+}
+
 
 .first-section .image-wrapper img {
   position: absolute;
@@ -90,11 +95,9 @@ h1{
 
 .example img{
   width: 30%;
-  display: inline-block;
-  width: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
+  margin: 0 auto 0 auto;
+
 }
 
 .assisted_help {
@@ -111,73 +114,17 @@ h1{
   align-items: center;
 }
 
-/* the image textbox */
 
-.question_images ul {
-  list-style-type: none;
-}
 
-.question_images li {
-  display: inline-block;
-}
-
-.question_images input[type="checkbox"][id^="myCheckbox"] {
-  display: none;
-}
-
-.question_images label {
-  border: 1px solid #fff;
-  padding: 10px;
+.imagesss img{
+  width: 40%;
   display: block;
-  position: relative;
-  margin: 10px;
-  cursor: pointer;
+  margin: 0 auto 0 auto;
 }
 
-.question_images label:before {
-  background-color: white;
-  color: white;
-  content: " ";
-  display: block;
-  border-radius: 50%;
-  border: 1px solid grey;
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  width: 25px;
-  height: 25px;
+.assisted_help{
   text-align: center;
-  line-height: 28px;
-  transition-duration: 0.4s;
-  transform: scale(0);
 }
-
-.question_images label img {
-  height: 200px;
-  width: 200px;
-  transition-duration: 0.2s;
-  transform-origin: 50% 50%;
-}
-
-:checked + label {
-  border-color: #ddd;
-}
-
-:checked + label:before {
-  content: "✓";
-  background-color: grey;
-  transform: scale(1);
-}
-
-:checked + label img {
-  transform: scale(0.9);
-
-  z-index: -1;
-}
-
-
-/*  */
-
 
 
 .check_box{
@@ -192,7 +139,10 @@ h1{
 .assisted_help .explanation{
   text-align: left;
   font-size: 17px;
+}
 
+.check_last{
+  color: white;
 }
 
 .example img{
@@ -248,5 +198,5 @@ h1{
 
 
 #footer p{
-  color: #303030;
+  color: white;
 }
