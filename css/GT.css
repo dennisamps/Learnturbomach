@@ -143,6 +143,17 @@ h7 {
   align-items: center;
 }
 
+.third-section video{
+
+  width: 100%;
+  height: auto;
+
+}
+
+#footer img{
+  width: 10%;
+}
+
 #footer {
 
   background-color: #444444;

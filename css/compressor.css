@@ -45,13 +45,6 @@ h7 {
 
 }
 
-.sectioned {
-  /* padding-left: 15%; */
-}
-
-.unsectioned{
-  /* padding-left: 15%; */
-}
 
 .second-section{
   text-align: center;
@@ -74,6 +67,13 @@ h7 {
   align-items: center;
 }
 
+
+.video video{
+
+  width: 100%;
+  height: auto;
+
+}
 
 .example{
   text-align: center;
@@ -182,7 +182,9 @@ h7 {
 }
 
 
-
+#footer img{
+  width: 10%;
+}
 
 #footer {
 
